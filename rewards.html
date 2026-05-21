@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | Rewards Program</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <select id="languageSelect" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-star"></i> Peak Rewards Program</h1>
+            <p>Earn points, unlock perks, and save on adventures</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- User Rewards Summary - Shows actual user data -->
+        <div class="rewards-summary" id="rewardsSummary">
+            <div class="rewards-card">
+                <i class="fas fa-coins"></i>
+                <div class="rewards-points" id="userPoints">0</div>
+                <p>Your Points</p>
+            </div>
+            <div class="rewards-card">
+                <i class="fas fa-trophy"></i>
+                <div class="rewards-tier" id="userTier">Bronze</div>
+                <p>Member Tier</p>
+            </div>
+            <div class="rewards-card">
+                <i class="fas fa-chart-line"></i>
+                <div class="rewards-next" id="pointsToNext">500</div>
+                <p>Points to Next Tier</p>
+            </div>
+        </div>
+
+        <!-- Membership Tiers -->
+        <div class="tiers-section">
+            <h2><i class="fas fa-medal"></i> Membership Tiers</h2>
+            <div class="tiers-grid">
+                <div class="tier-card bronze" id="bronzeTier">
+                    <i class="fas fa-medal"></i>
+                    <h3>Bronze</h3>
+                    <p class="tier-points">0 - 999 points</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 5% off all bookings</li>
+                        <li><i class="fas fa-gift"></i> Birthday bonus points</li>
+                        <li><i class="fas fa-envelope"></i> Monthly newsletter</li>
+                    </ul>
+                </div>
+                <div class="tier-card silver" id="silverTier">
+                    <i class="fas fa-medal"></i>
+                    <h3>Silver</h3>
+                    <p class="tier-points">1,000 - 2,499 points</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 10% off all bookings</li>
+                        <li><i class="fas fa-headset"></i> Priority support</li>
+                        <li><i class="fas fa-map"></i> Free trail map</li>
+                        <li><i class="fas fa-check"></i> All Bronze benefits</li>
+                    </ul>
+                </div>
+                <div class="tier-card gold" id="goldTier">
+                    <i class="fas fa-medal"></i>
+                    <h3>Gold</h3>
+                    <p class="tier-points">2,500 - 4,999 points</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 15% off all bookings</li>
+                        <li><i class="fas fa-hiking"></i> 1 free guided tour/year</li>
+                        <li><i class="fas fa-calendar-alt"></i> Exclusive events</li>
+                        <li><i class="fas fa-check"></i> All Silver benefits</li>
+                    </ul>
+                </div>
+                <div class="tier-card platinum" id="platinumTier">
+                    <i class="fas fa-medal"></i>
+                    <h3>Platinum</h3>
+                    <p class="tier-points">5,000+ points</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 20% off all bookings</li>
+                        <li><i class="fas fa-hotel"></i> 1 free weekend stay/year</li>
+                        <li><i class="fas fa-crown"></i> VIP experiences</li>
+                        <li><i class="fas fa-check"></i> All Gold benefits</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Earn Points -->
+        <div class="earn-points-section">
+            <h2><i class="fas fa-chart-simple"></i> How to Earn Points</h2>
+            <div class="earn-grid">
+                <div class="earn-card" data-points="100">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Book an Attraction</h4>
+                    <p>+100 points per booking</p>
+                    <button class="earn-btn" onclick="earnPoints(100, 'booking')">Book Now →</button>
+                </div>
+                <div class="earn-card" data-points="50">
+                    <i class="fas fa-share-alt"></i>
+                    <h4>Share on Social Media</h4>
+                    <p>+50 points</p>
+                    <button class="earn-btn" onclick="earnPoints(50, 'social')">Share Now →</button>
+                </div>
+                <div class="earn-card" data-points="200">
+                    <i class="fas fa-star"></i>
+                    <h4>Write a Review</h4>
+                    <p>+200 points</p>
+                    <button class="earn-btn" onclick="earnPoints(200, 'review')">Write Review</button>
+                </div>
+                <div class="earn-card" data-points="75">
+                    <i class="fas fa-users"></i>
+                    <h4>Refer a Friend</h4>
+                    <p>+75 points per referral</p>
+                    <button class="earn-btn" onclick="earnPoints(75, 'referral')">Refer Now →</button>
+                </div>
+                <div class="earn-card" data-points="25">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Daily Check-in</h4>
+                    <p>+25 points daily</p>
+                    <button class="earn-btn" onclick="earnPoints(25, 'checkin')">Check In</button>
+                </div>
+                <div class="earn-card" data-points="500">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h4>Birthday Bonus</h4>
+                    <p>+500 points on your birthday!</p>
+                    <button class="earn-btn" onclick="earnPoints(500, 'birthday')">Claim Birthday Bonus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Point Redemption -->
+        <div class="redeem-section">
+            <h2><i class="fas fa-gift"></i> Redeem Your Points</h2>
+            <div class="redeem-grid">
+                <div class="redeem-card">
+                    <div class="redeem-points">500 pts</div>
+                    <h4>Free Trail Map</h4>
+                    <p>Digital + physical map</p>
+                    <button class="redeem-btn" onclick="redeemPoints(500, 'Trail Map')">Redeem</button>
+                </div>
+                <div class="redeem-card">
+                    <div class="redeem-points">1000 pts</div>
+                    <h4>$10 Discount</h4>
+                    <p>On any booking</p>
+                    <button class="redeem-btn" onclick="redeemPoints(1000, '$10 Discount')">Redeem</button>
+                </div>
+                <div class="redeem-card">
+                    <div class="redeem-points">2500 pts</div>
+                    <h4>Free Guided Tour</h4>
+                    <p>2-hour guided experience</p>
+                    <button class="redeem-btn" onclick="redeemPoints(2500, 'Free Guided Tour')">Redeem</button>
+                </div>
+                <div class="redeem-card">
+                    <div class="redeem-points">5000 pts</div>
+                    <h4>Weekend Stay</h4>
+                    <p>2 nights in luxury lodge</p>
+                    <button class="redeem-btn" onclick="redeemPoints(5000, 'Weekend Stay')">Redeem</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Points History -->
+        <div class="history-section">
+            <h2><i class="fas fa-history"></i> Points History</h2>
+            <div class="history-list" id="pointsHistory">
+                <p style="text-align: center; color: #6a9c6a;">No points earned yet. Start earning today!</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col"><h4>Paradise Peak</h4><p>Elevate your journey to new heights</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="virtual-tour.html">Virtual Tour</a></li><li><a href="interactive-map.html">Map</a></li><li><a href="blog.html">Blog</a></li><li><a href="rewards.html">Rewards</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p><i class="fas fa-tree"></i> Paradise Peak — Elevate your journey • © 2025</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

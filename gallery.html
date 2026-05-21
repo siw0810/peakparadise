@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <select id="languageSelect" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1>Visual Escape</h1>
+            <p>Immerse yourself in the beauty of Paradise Peak through our photo collection</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="gallery-filter">
+            <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+            <button class="gallery-filter-btn" data-filter="landscape">Landscapes</button>
+            <button class="gallery-filter-btn" data-filter="activity">Activities</button>
+            <button class="gallery-filter-btn" data-filter="wildlife">Wildlife</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-nav">
+            <button class="lightbox-prev" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col"><h4>Paradise Peak</h4><p>Elevate your journey to new heights</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="virtual-tour.html">Virtual Tour</a></li><li><a href="interactive-map.html">Map</a></li><li><a href="blog.html">Blog</a></li><li><a href="rewards.html">Rewards</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p><i class="fas fa-tree"></i> Paradise Peak — Elevate your journey • © 2025</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

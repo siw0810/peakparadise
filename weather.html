@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | Weather & Conditions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header"><div class="container"><h1>Mountain Weather</h1><p>Real-time conditions for your adventure</p></div></div>
+
+    <div class="container">
+        <div class="weather-main">
+            <div class="current-weather" id="currentWeather">
+                <div class="weather-icon"><i class="fas fa-cloud-sun"></i></div>
+                <div class="weather-temp" id="weatherTemp">--°C</div>
+                <div class="weather-condition" id="weatherCondition">Loading...</div>
+                <div class="weather-details" id="weatherDetails"></div>
+            </div>
+            
+            <div class="weather-forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </div>
+        </div>
+
+        <div class="conditions-grid">
+            <div class="condition-card"><i class="fas fa-skiing"></i><h4>Trail Conditions</h4><p id="trailCondition">All trails open</p></div>
+            <div class="condition-card"><i class="fas fa-eye"></i><h4>Visibility</h4><p id="visibility">Excellent (10+ miles)</p></div>
+            <div class="condition-card"><i class="fas fa-wind"></i><h4>Wind Speed</h4><p id="windSpeed">5-10 mph</p></div>
+            <div class="condition-card"><i class="fas fa-tint"></i><h4>Humidity</h4><p id="humidity">45%</p></div>
+            <div class="condition-card"><i class="fas fa-thermometer-half"></i><h4>UV Index</h4><p id="uvIndex">Moderate (5)</p></div>
+            <div class="condition-card"><i class="fas fa-mountain"></i><h4>Summit Temp</h4><p id="summitTemp">--°C</p></div>
+        </div>
+
+        <div class="weather-alert" id="weatherAlert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>No active weather alerts. Safe for hiking!</span>
+        </div>
+    </div>
+</main>
+
+<footer>...</footer>
+<script src="script.js"></script>
+</body>
+</html>

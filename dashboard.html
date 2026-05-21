@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | My Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <select id="languageSelect" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1>Welcome, <span id="userNameDisplay">Traveler</span>!</h1>
+            <p>Manage your bookings and explore exclusive offers</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Dashboard Stats -->
+        <div class="dashboard-stats" id="dashboardStats"></div>
+
+        <!-- Upcoming Bookings -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-calendar-check"></i> Your Upcoming Adventures</h2>
+            <div class="bookings-list" id="upcomingBookings"></div>
+        </div>
+
+        <!-- Interactive Calendar Section -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-calendar-alt"></i> Interactive Booking Calendar</h2>
+            <p>Click on any available date to book your adventure</p>
+            <div id="bookingCalendar"></div>
+            <div id="selectedDateDisplay" style="margin: 1rem 0; color: #c85b1a; font-weight: bold;"></div>
+            <div class="quick-booking">
+                <select id="quickBookingSelect">
+                    <option value="">Select an attraction...</option>
+                    <option value="Emerald Lake Trail">🥾 Emerald Lake Trail - $49</option>
+                    <option value="Sunset Ridge Lookout">📸 Sunset Ridge Lookout - $39</option>
+                    <option value="Ancient Pines Forest">🌲 Ancient Pines Forest - $59</option>
+                    <option value="Whispering Falls">💧 Whispering Falls - $79</option>
+                    <option value="Eagle's Nest Peak">🏔️ Eagle's Nest Peak - $99</option>
+                    <option value="Starlight Meadow">⭐ Starlight Meadow - $45</option>
+                </select>
+                <select id="bookingGuests">
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                </select>
+                <button class="cta-button small" onclick="advancedBooking()">📅 Book Selected Date</button>
+            </div>
+            <div id="quickBookMessage" class="booking-message"></div>
+        </div>
+
+        <!-- Analytics Dashboard -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-chart-line"></i> Your Analytics</h2>
+            <div class="analytics-grid" id="analyticsDashboard"></div>
+        </div>
+
+        <!-- Social Sharing -->
+        <div class="dashboard-section">
+            <h2><i class="fas fa-share-alt"></i> Share Paradise Peak</h2>
+            <p>Share this amazing destination with your friends!</p>
+            <div class="share-buttons">
+                <button class="share-btn share-facebook" onclick="shareOnFacebook()"><i class="fab fa-facebook"></i> Facebook</button>
+                <button class="share-btn share-twitter" onclick="shareOnTwitter()"><i class="fab fa-twitter"></i> Twitter</button>
+                <button class="share-btn share-whatsapp" onclick="shareOnWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+            </div>
+        </div>
+
+        <!-- Special Offers Banner -->
+        <div class="offers-banner">
+            <i class="fas fa-gift"></i>
+            <div class="offers-text">
+                <h3>Limited Time Offer!</h3>
+                <p>Book 3 or more attractions and get 20% off your total. Use code: PEAK20</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col"><h4>Paradise Peak</h4><p>Elevate your journey to new heights</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="virtual-tour.html">Virtual Tour</a></li><li><a href="interactive-map.html">Map</a></li><li><a href="blog.html">Blog</a></li><li><a href="rewards.html">Rewards</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p><i class="fas fa-tree"></i> Paradise Peak — Elevate your journey • © 2025</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

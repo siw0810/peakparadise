@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <select id="languageSelect" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Where Clouds Kiss the Peaks</h1>
+            <p>Discover the ultimate mountain retreat — breathtaking views, thrilling trails, and soulful serenity.</p>
+            <a href="attractions.html" class="cta-button">Explore Wonder <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="weather-widget">
+            <div class="weather-header"><i class="fas fa-cloud-sun"></i> Live Mountain Weather</div>
+            <div class="weather-content" id="homeWeatherContent">Loading weather data...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">✨ Why Paradise Peak?</h2>
+        <div class="sub">Experience nature at its finest</div>
+        <div class="features-grid" id="featuresGrid"></div>
+    </div>
+
+    <div class="container">
+        <div class="promo-banner">
+            <div class="promo-text">
+                <h3><i class="fas fa-gift"></i> Limited Time Offer!</h3>
+                <p>Book any 3 attractions and get 20% off + free souvenir package</p>
+                <a href="rewards.html" class="promo-btn">Claim Offer →</a>
+            </div>
+            <div class="promo-countdown" id="countdownTimer">
+                <div class="countdown-item"><span id="days">00</span><small>Days</small></div>
+                <div class="countdown-item"><span id="hours">00</span><small>Hours</small></div>
+                <div class="countdown-item"><span id="minutes">00</span><small>Mins</small></div>
+                <div class="countdown-item"><span id="seconds">00</span><small>Secs</small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="testimonial">
+            <i class="fas fa-quote-left" style="color:#c97e3a; font-size: 2rem; opacity: 0.6;"></i>
+            <p class="quote" id="rotatingQuote">"The sunrise from the summit changed my life."</p>
+            <p style="margin-top: 1rem; font-weight: 600;" id="quoteAuthor">— Elena Rodriguez</p>
+            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats-section" id="statsSection"></div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col"><h4>Paradise Peak</h4><p>Elevate your journey to new heights</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="virtual-tour.html">Virtual Tour</a></li><li><a href="interactive-map.html">Map</a></li><li><a href="blog.html">Blog</a></li><li><a href="rewards.html">Rewards</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p><i class="fas fa-tree"></i> Paradise Peak — Elevate your journey • © 2025</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

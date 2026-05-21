@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Peak | Virtual Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><i class="fas fa-mountain"></i> Paradise Peak</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="video-gallery.html">Videos</a></li>
+                <li><a href="virtual-tour.html" class="active">Virtual Tour</a></li>
+                <li><a href="interactive-map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <select id="languageSelect" class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h1>360° Virtual Tour</h1>
+            <p>Experience Paradise Peak from anywhere. Click and drag to explore!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="virtual-tour-container">
+            <div class="virtual-scene" id="virtualScene">
+                <img id="virtualImage" src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Virtual Tour">
+                <div class="nav-controls">
+                    <button class="nav-btn" data-scene="summit"><i class="fas fa-mountain"></i> Summit</button>
+                    <button class="nav-btn" data-scene="lake"><i class="fas fa-water"></i> Emerald Lake</button>
+                    <button class="nav-btn" data-scene="forest"><i class="fas fa-tree"></i> Ancient Forest</button>
+                    <button class="nav-btn" data-scene="waterfall"><i class="fas fa-tint"></i> Waterfall</button>
+                </div>
+            </div>
+            <div class="tour-info">
+                <h3 id="tourTitle">Mountain Summit</h3>
+                <p id="tourDescription">Experience the breathtaking 360° view from the highest peak. On clear days, you can see three states from here!</p>
+                <div class="tour-controls">
+                    <button id="autoRotateBtn" class="tour-control-btn"><i class="fas fa-sync-alt"></i> Auto Rotate</button>
+                    <button id="fullscreenBtn" class="tour-control-btn"><i class="fas fa-expand"></i> Fullscreen</button>
+                </div>
+                <div class="tour-progress" id="tourProgress"></div>
+            </div>
+        </div>
+        
+        <div class="tour-features">
+            <div class="tour-feature">
+                <i class="fas fa-vr-cardboard"></i>
+                <h4>VR Compatible</h4>
+                <p>Works with VR headsets</p>
+            </div>
+            <div class="tour-feature">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Mobile Ready</h4>
+                <p>Optimized for all devices</p>
+            </div>
+            <div class="tour-feature">
+                <i class="fas fa-360-degrees"></i>
+                <h4>360° Views</h4>
+                <p>Full panoramic experience</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col"><h4>Paradise Peak</h4><p>Elevate your journey to new heights</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="attractions.html">Attractions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="virtual-tour.html">Virtual Tour</a></li><li><a href="interactive-map.html">Map</a></li><li><a href="blog.html">Blog</a></li><li><a href="rewards.html">Rewards</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h4>Follow Us</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p><i class="fas fa-tree"></i> Paradise Peak — Elevate your journey • © 2025</p></div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
